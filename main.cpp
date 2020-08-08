@@ -65,22 +65,21 @@ vector<vector<string> > Reader::read() {
             ++count;
         }
         file.close();
-    }
-    else throw runtime_error("The file does not exist");
+    } else throw runtime_error("The file does not exist");
 
     return data;
 }
 
 // Splits string into tokens vector<string> by delimeter
 vector<string> Reader::split(string s, char dl) {
-    size_t pos;
+    int it;
     string token;
     vector<string> tokens;
 
-    while ((pos = s.find(dl)) != std::string::npos) {
-        token = s.substr(0, pos);
+    while ((it = s.find(dl)) != std::string::npos) {
+        token = s.substr(0, it);
         tokens.push_back(token);
-        s.erase(0, pos + 1);
+        s.erase(0, it + 1);
     }
 
     tokens.push_back(s);
@@ -131,7 +130,7 @@ int Reader::get_val(const string &arg) {
             }
         }
 
-        for (auto i: data[2]) {
+        for (auto i: data) {
             // Checking array bounds
             if (data.size() >= rows[row] + 1 && data[0].size() >= columns[col] + 1) {
                 // Making sure that the cell contains a number
@@ -165,7 +164,9 @@ int Reader::compute(int arg1, int arg2, char op) {
         case '*':
             return arg1 * arg2;
         case '/':
-            return arg1 / arg2;
+            if (arg2)
+                return arg1 / arg2;
+            else throw runtime_error("Dividing by zero");
         default:
             return 0;
     }
