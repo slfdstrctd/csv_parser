@@ -1,5 +1,5 @@
 # nokia_csv
-CSV solver for Nokia internship
+CSV reader for Nokia internship
 
 # About
 The program reads an arbitrary CSV form from a file (the number of rows and columns can be any), calculates cell values, and outputs the resulting table as a CSV representation to the console.
