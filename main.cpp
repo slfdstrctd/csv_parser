@@ -10,11 +10,9 @@ class Reader {
     string path;
     char delimiter;
     vector<vector<string> > data;
-
-public:
-
     static unordered_map<string, int> rows, columns;
 
+public:
     explicit Reader(string name, char dl = ',') :
             path(move(name)), delimiter(dl) {}
 
