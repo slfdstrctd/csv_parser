@@ -1,17 +1,17 @@
-# nokia_csv
-CSV reader for Nokia internship
+# csv_parser
 
-# About
+
+## About
 The program reads an arbitrary CSV form from a file (the number of rows and columns can be any), calculates cell values, and outputs the resulting table as a CSV representation to the console.
 
-# Tests
+## Tests
 * example.csv - Nokia's test
 * fib.csv - Fibonacci numbers
 * degrees.csv - table of degrees
 * crash_nested.csv - error using a nested cell (the order of operations is not being built, so cells with nested formulas will not be counted)
 * div_zero.csv - error dividing by zero
 
-# Results
+## Results
 * example.csv
 
 | | A  | B | Cell
