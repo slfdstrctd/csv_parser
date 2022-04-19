@@ -5,7 +5,7 @@
 The program reads an arbitrary CSV form from a file (the number of rows and columns can be any), calculates cell values, and outputs the resulting table as a CSV representation to the console.
 
 ## Tests
-* example.csv - Nokia's test
+* example.csv - test file
 * fib.csv - Fibonacci numbers
 * degrees.csv - table of degrees
 * crash_nested.csv - error using a nested cell (the order of operations is not being built, so cells with nested formulas will not be counted)
